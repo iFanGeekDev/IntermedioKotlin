@@ -1,4 +1,4 @@
-package com.example.horoscapp.ui
+package com.example.horoscapp.ui.palmistry
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.horoscapp.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class PalmistryFragment : Fragment() {
 
     private var _binding: FragmentPalmistryBinding? = null
