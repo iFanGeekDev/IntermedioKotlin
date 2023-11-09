@@ -38,7 +38,7 @@ android {
     }
 
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -46,6 +46,7 @@ android {
 dependencies {
 
     val navVersion = "2.7.5"
+    val retrofit = "2.9.0"
 
     // NavComponent
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
@@ -54,7 +55,13 @@ dependencies {
     //DaggerHilt
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-compiler:2.48")
-    //implementation ("com.android.support:multidex:2.0.1")
+
+    //Retrofit
+    implementation("com.squareup.retrofit2:retrofit:$retrofit")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofit")
+
+    //Interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.3.1")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
